@@ -10,7 +10,7 @@
             ],
             "Resource": "arn:*:logs:*:*:*"
         },
-		{
+        {
             "Effect": "Allow",
             "Action": [
                 "bedrock:*"

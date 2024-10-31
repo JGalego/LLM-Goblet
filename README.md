@@ -2,14 +2,14 @@
 
 ## Overview
 
-LLM proxy application built with [AWS Chalice](https://aws.github.io/chalice/) and powered by [LiteLLM](https://www.litellm.ai/).
+LLM proxy application powered by [AWS Chalice](https://aws.github.io/chalice/)  [LiteLLM](https://www.litellm.ai/).
 
 <img src="assets/goblet.jpg" width="50%"/>
 
 ## Prerequisites
 
 * [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) (*preferred*) or [Python](https://www.python.org/) (version `>=3.9`) 🐍
-* (*Optional*) [just](https://github.com/casey/just) + [jq](https://jqlang.github.io/jq/)
+* (*Optional*) [just](https://github.com/casey/just) and [jq](https://jqlang.github.io/jq/)
 
 ## Getting Started
 
@@ -27,17 +27,17 @@ LLM proxy application built with [AWS Chalice](https://aws.github.io/chalice/) a
 
 2. Test it out!
 
-```bash
-curl -s -X POST `chalice url --stage dev`/images/generations \
-	--user "$AWS_ACCESS_KEY_ID":"$AWS_SECRET_ACCESS_KEY" \
-	--aws-sigv4 "aws:amz:$AWS_DEFAULT_REGION:execute-api" \
-	-H "x-amz-security-token: $AWS_SESSION_TOKEN" \
-	-H "Accept: application/json" \
-	-H "Content-Type: application/json" \
-	-d @assets/goblet.json | jq -r .data[0].b64_json | base64 -d > goblet.jpg
-```
+    ```bash
+    curl -s -X POST `chalice url --stage dev`/images/generations \
+        --user "$AWS_ACCESS_KEY_ID":"$AWS_SECRET_ACCESS_KEY" \
+        --aws-sigv4 "aws:amz:$AWS_DEFAULT_REGION:execute-api" \
+        -H "x-amz-security-token: $AWS_SESSION_TOKEN" \
+        -H "Accept: application/json" \
+        -H "Content-Type: application/json" \
+        -d @assets/goblet.json | jq -r .data[0].b64_json | base64 -d > assets/goblet.jpg
+    ```
 
-## Some final remarks
+## But wait, there's more!
 
 This project includes a [just](https://github.com/casey/just)file that simplifies the process of building, deploying and testing the application.
 
