@@ -2,7 +2,7 @@
 
 ## Overview
 
-LLM proxy application powered by [AWS Chalice](https://aws.github.io/chalice/)  [LiteLLM](https://www.litellm.ai/).
+LLM proxy application powered by [AWS Chalice](https://aws.github.io/chalice/) and [LiteLLM](https://www.litellm.ai/).
 
 <img src="assets/goblet.jpg" width="50%"/>
 
@@ -57,3 +57,5 @@ just image "An astronaut riding a horse on Mars"
 # Clean 🧹
 just destroy
 ```
+
+**Want to learn more about just?** Check out the [Just Programmer's Manual](https://just.systems/man/en/) 📖
