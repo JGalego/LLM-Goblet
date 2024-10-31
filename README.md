@@ -43,6 +43,7 @@ This project includes a [just](https://github.com/casey/just)file that simplifie
 
 ```bash
 # Run 🛠️
+just local
 just deploy
 
 # Check ✅
