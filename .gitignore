@@ -1,0 +1,4 @@
+__pycache__
+.chalice/deployed/
+.chalice/deployments/
+.chalice/venv/

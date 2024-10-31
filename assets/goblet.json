@@ -1,0 +1,6 @@
+{
+    "model": "bedrock/stability.stable-diffusion-xl-v1",
+    "prompt": "a colorful goblet floating in outer space",
+    "size": "1024x1024",
+    "seed": 42
+}
